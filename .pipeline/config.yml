@@ -1,0 +1,18 @@
+general:
+  cpiApiServiceKeyCredentialsId: "cpi-test"
+  integrationFlowId: "SSL_Certificate_Notify"
+stages:
+  uploadStage:
+    enabled: true
+  deployStage:
+    enabled: true
+  integrationTestStage:
+    enabled: false
+steps:
+  integrationArtifactUpload:
+    packageId: "CICDSSL"
+    integrationFlowName: "SSL_Certificate_Notify"
+  integrationArtifactTriggerIntegrationTest:
+    contentType: ""
+    messageBodyPath: ""
+    iFlowServiceKeyCredentialsId: "cpi-test"
